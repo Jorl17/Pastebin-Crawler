@@ -54,3 +54,6 @@ Examples:
     (serial\b|cd-key\b|key\b|license\b),              serials.txt,   serials
 
 **And yes, you can use commas in the regex. Just don't do it in filename or directory. Really, _don't_!**
+
+## What about crawling other websites, or automatically downloading the URLs found in a pastie?
+Although not exactly the same, I have contributed to another tool which is a **general purpose crawler for the web** with much of the functionality of this Pastebin crawler. The project is called [NowCrawling](https://github.com/xJota/NowCrawling) and you should go check it out if you want to do some more advanced crawling (e.g. search the whole web for regexes, download all files/images in a list of URLs, finding easily acessible TV series episodes, albums, etc). [Check it out!](https://github.com/xJota/NowCrawling)
