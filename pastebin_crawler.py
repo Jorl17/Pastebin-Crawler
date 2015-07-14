@@ -296,6 +296,11 @@ class Crawler:
     def start ( self, refresh_time = 30, delay = 1, ban_wait = 5, flush_after_x_refreshes=100, connection_timeout=60 ):
         count = 0
         while True:
+
+            """
+                Let's have some fun stealing all those usernames and passwords :)
+            """
+
             status,pastes = self.get_pastes ()
 
             start_time = time.time()
@@ -334,9 +339,9 @@ class Crawler:
 
 def parse_input():
     parser = OptionParser()
-    parser.add_option('-r', '--refresh-time', help='Set the refresh time (default: 30)', dest='refresh_time', type='int', default=30)
-    parser.add_option('-d', '--delay-time', help='Set the delay time (default: 1)', dest='delay', type='float', default=1)
-    parser.add_option('-b', '--ban-wait-time', help='Set the ban wait time (default: 5)', dest='ban_wait', type='int', default=5)
+    parser.add_option('-r', '--refresh-time', help='Set the refresh time (default: 30 seconds)', dest='refresh_time', type='int', default=30)
+    parser.add_option('-d', '--delay-time', help='Set the delay time (default: 1 second)', dest='delay', type='float', default=1)
+    parser.add_option('-b', '--ban-wait-time', help='Set the ban wait time (default: 5 minutes)', dest='ban_wait', type='int', default=5)
     parser.add_option('-f', '--flush-after-x-refreshes', help='Set the number of refreshes after which memory is flushed (default: 100)', dest='flush_after_x_refreshes', type='int', default=100)
     parser.add_option('-c', '--connection-timeout', help='Set the connection timeout waiting time (default: 60)', dest='connection_timeout', type='float', default=60)
     (options, args) = parser.parse_args()
